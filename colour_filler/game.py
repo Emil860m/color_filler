@@ -1,21 +1,8 @@
-import heapq
 from enum import Enum
 
-
-class Tile(Enum):
-    EMPTY = 0
-    NORMAL = 1
-    DISAPPEARING = 2
-    PUSH = 3
-    HOLE = 4
-    GREY_HOLE = 5
-
-
-class Move(Enum):
-    LEFT = 0
-    RIGHT = 1
-    UP = 2
-    DOWN = 3
+from Block import Block, Move
+from Cell import Tile
+from Grid import Grid
 
 
 class GameController(Enum):
@@ -23,59 +10,12 @@ class GameController(Enum):
     LOST = 0
     WON = 2
 
-
-class Grid:
-    def __init__(self, state=None, tiles=None):
-        if not state is None:
-            self.tiles = create_from_string(state)
-        self.width = len(self.tiles[0])
-        self.height = len(self.tiles)
-
-    def print_grid(self):
-        for row in self.tiles:
-            for tile in row:
-                print(tile, end=" ")
-            print("")
-
-    def get_tile(self, x, y):
-        return self.tiles[y][x]
-
-    def set_tile(self, x, y, tile):
-        self.tiles[y][x] = tile
-
-
-def create_from_string(s):
-    rows = s.split("|")
-    grid = [row.split(";") for row in rows]
-    return grid
-
-
-class Block:
-    def __init__(self, x, y, value):
-        self.x = x
-        self.y = y
-        self.value = value
-
-    def move(self, move):
-        if move == Move.UP:
-            self.y -= 1
-        elif move == Move.DOWN:
-            self.y += 1
-        elif move == Move.LEFT:
-            self.x -= 1
-        elif move == Move.RIGHT:
-            self.x += 1
-
-    def __str__(self):
-        return str(self.x) + ", " + str(self.y)
-
-
 class Game:
-    def __init__(self, state=None, tiles=None):
+    def __init__(self, state=None, grid=None):
         if not state is None:
             self.grid = Grid(state=state)
-        elif not tiles is None:
-            self.grid = Grid(tiles=tiles)
+        elif not grid is None:
+            self.grid = Grid(tiles=grid)
         else:
             print("State or tiles must be provided")
             exit(1)
@@ -89,7 +29,7 @@ class Game:
                     if "p" in tile and "4" not in tile:
                         self.player_block = Block(x, y, "p")
                     elif len(tile) > 1 and "4" not in tile:
-                        self.blocks.append(Block(x, y, tile[1]))
+                        self.blocks.append(Block(x,y, tile[1]))
                 x = x + 1
             y = y + 1
 
@@ -109,20 +49,21 @@ class Game:
                 if b.value in self.grid.get_tile(block.x, block.y) and not b.value == block.value:
                     return "Lost"
         self.blocks_to_move = []
-        self.grid.set_tile(self.player_block.x, self.player_block.y,
-                           self.grid.get_tile(self.player_block.x, self.player_block.y)[:-1])
+        if self.grid.get_tile(self.player_block.x, self.player_block.y) == Tile.DISAPPEARING:
+            self.grid.set_tile(self.player_block.x, self.player_block.y, str(Tile.EMPTY))
+        else:
+            self.grid.set_tile(self.player_block.x, self.player_block.y, self.grid.get_tile(self.player_block.x, self.player_block.y)[:-1])
         self.player_block.move(move)
-        self.grid.set_tile(self.player_block.x, self.player_block.y,
-                           self.grid.get_tile(self.player_block.x, self.player_block.y) + self.player_block.value)
+        self.grid.set_tile(self.player_block.x, self.player_block.y, self.grid.get_tile(self.player_block.x, self.player_block.y) + self.player_block.value)
         if "pp" in self.grid.get_tile(self.player_block.x, self.player_block.y):
             if len(self.blocks) > 0:
                 return "Lost"
             return "Win"
         for b in self.blocks:
-            if b.value in self.grid.get_tile(self.player_block.x,
-                                             self.player_block.y) and not b.value == self.player_block.value:
+            if b.value in self.grid.get_tile(self.player_block.x, self.player_block.y) and not b.value == self.player_block.value:
                 return "Lost"
         return self.get_state()
+
 
     def get_state(self):
         state = ""
@@ -138,6 +79,7 @@ class Game:
         if not "p" in state:
             print("not p")
         return state
+
 
     def valid_move(self, x, y, move):
         new_x = x
@@ -178,54 +120,7 @@ class Game:
                     if "p" in tile and "4" not in tile:
                         self.player_block = Block(x, y, "p")
                     elif len(tile) > 1 and "4" not in tile:
-                        self.blocks.append(Block(x, y, tile[1]))
+                        self.blocks.append(Block(x,y, tile[1]))
                 x = x + 1
             y = y + 1
 
-
-s8 = "0;0;0;4p;0|0;1;1;1a;4a|0;1;1b;1c;4b|4c;1;1;1p;1|0;0;0;1;0"
-s9 = "0;1;1;1;1|4a;1;1b;1a;4p|1;1;1;1c;1|4c;0;4b;1p;1"
-s2 = "1;1;0|1;1a;0|1p;4a;4p"
-
-
-def level_solver(level):
-    print("Starting game state: " + level)
-    g = Game(state=level)
-    game_states = {g.get_state(): {Move.RIGHT: None, Move.LEFT: None, Move.UP: None, Move.DOWN: None}}
-    shortest_path = {g.get_state(): {"prev": None, "length": 0}}
-    que = []
-    heapq.heappush(que, g.get_state())
-    seen_states = set()
-    seen_states.add(g.get_state())
-    while len(que) > 0:
-        state = heapq.heappop(que)
-        g.set_state(state)
-        gs = game_states[state]
-        for move in gs:
-            if gs[move] is None:
-                g.set_state(state)
-                new_state = g.movement(move)
-                gs[move] = new_state
-                if new_state not in seen_states:
-                    seen_states.add(new_state)
-                    shortest_path[new_state] = {"prev": state, "length": shortest_path[state]["length"] + 1}
-                    if not (new_state == "Lost" or new_state == "Win"):
-                        heapq.heappush(que, new_state)
-                        game_states[new_state] = {Move.RIGHT: None, Move.LEFT: None, Move.UP: None, Move.DOWN: None}
-                elif shortest_path[new_state]["length"] > shortest_path[state]["length"] + 1:
-                    shortest_path[new_state]["length"] = shortest_path[state]["length"] + 1
-                    shortest_path[new_state]["prev"] = shortest_path[state]["prev"]
-    print("Unique States: " + str(len(seen_states)))
-    # prev = shortest_path["Win"]["prev"]
-    if "Win" not in shortest_path.keys():
-        print("Level not possible to win")
-        return
-    print("Win in " + str(shortest_path["Win"]["length"]) + " steps")
-    # while prev != level:
-    #     print(prev)
-    #     prev = shortest_path[prev]["prev"]
-
-
-level_solver(s2)
-level_solver(s8)
-level_solver(s9)
