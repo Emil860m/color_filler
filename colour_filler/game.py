@@ -21,15 +21,18 @@ class Game:
             exit(1)
         y = 0
         self.blocks = []
+        self.grey_blocks = []
         self.blocks_to_move = []
         for row in self.grid.tiles:
             x = 0
             for tile in row:
-                if len(tile) > 0:
-                    if "p" in tile and "4" not in tile:
+                if tile.block is not None:
+                    if tile.block.value == "p":
                         self.player_block = Block(x, y, "p")
-                    elif len(tile) > 1 and "4" not in tile:
-                        self.blocks.append(Block(x,y, tile[1]))
+                    elif tile.block.value == "g":
+                        self.grey_blocks.append(Block(x, y, "g"))
+                    else:
+                        self.blocks.append(Block(x,y, tile.block.value))
                 x = x + 1
             y = y + 1
 
@@ -37,31 +40,31 @@ class Game:
         if not self.valid_move(self.player_block.x, self.player_block.y, move):
             return self.get_state()
         for block in self.blocks_to_move:
-            self.grid.set_tile(block.x, block.y, self.grid.get_tile(block.x, block.y)[:-1])
-            block.move(move)
-            self.grid.set_tile(block.x, block.y, self.grid.get_tile(block.x, block.y) + block.value)
-            if "p" + block.value in self.grid.get_tile(block.x, block.y):
-                return "Lost"
-            if block.value * 2 in self.grid.get_tile(block.x, block.y):
-                self.blocks.remove(block)
-                self.grid.set_tile(block.x, block.y, "1")
-            for b in self.blocks:
-                if b.value in self.grid.get_tile(block.x, block.y) and not b.value == block.value:
+            block.move(move, self.grid)
+            if self.grid.get_tile(block.x, block.y).tile == Tile.HOLE:
+                if not block.value == self.grid.get_tile(block.x, block.y).value:
                     return "Lost"
+                else:
+                    self.blocks.remove(block)
+                    self.grid.set_tile(block.x, block.y, "1")
         self.blocks_to_move = []
-        if self.grid.get_tile(self.player_block.x, self.player_block.y) == Tile.DISAPPEARING:
-            self.grid.set_tile(self.player_block.x, self.player_block.y, str(Tile.EMPTY))
-        else:
-            self.grid.set_tile(self.player_block.x, self.player_block.y, self.grid.get_tile(self.player_block.x, self.player_block.y)[:-1])
-        self.player_block.move(move)
-        self.grid.set_tile(self.player_block.x, self.player_block.y, self.grid.get_tile(self.player_block.x, self.player_block.y) + self.player_block.value)
-        if "pp" in self.grid.get_tile(self.player_block.x, self.player_block.y):
-            if len(self.blocks) > 0:
+        if self.grid.get_tile(self.player_block.x, self.player_block.y).tile == Tile.DISAPPEARING:
+            self.grid.get_tile(self.player_block.x, self.player_block.y).tile = Tile.EMPTY
+        self.player_block.move(move, self.grid)
+        if self.grid.get_tile(self.player_block.x, self.player_block.y).tile == Tile.HOLE:
+            if not self.player_block.value == self.grid.get_tile(self.player_block.x, self.player_block.y).value:
                 return "Lost"
-            return "Win"
-        for b in self.blocks:
-            if b.value in self.grid.get_tile(self.player_block.x, self.player_block.y) and not b.value == self.player_block.value:
+            else:
+                if len(self.blocks) == 0:
+                    return "Win"
                 return "Lost"
+        if self.grid.get_tile(self.player_block.x, self.player_block.y).tile == Tile.PUSH:
+            #TODO: push tile logic
+            pass
+        for block in self.blocks:
+            if self.grid.get_tile(block.x, block.y).tile == Tile.PUSH:
+                #TODO: push tile logic
+                pass
         return self.get_state()
 
 
@@ -69,10 +72,7 @@ class Game:
         state = ""
         for row in self.grid.tiles:
             for cell in row:
-                if len(cell) > 2:
-                    print(cell)
-                    exit(1)
-                state += cell + ";"
+                state += str(cell) + ";"
             state = state[:-1]
             state += "|"
         state = state[:-1]
@@ -93,7 +93,7 @@ class Game:
         elif move == Move.RIGHT:
             new_x = x + 1
         if (self.grid.height - 1 >= new_y >= 0) and (self.grid.width - 1 >= new_x >= 0):
-            if self.grid.get_tile(new_x, new_y) == "0":
+            if self.grid.get_tile(new_x, new_y).tile == Tile.EMPTY:
                 return False
             for b in self.blocks:
                 if b.x == new_x and b.y == new_y:
@@ -116,11 +116,11 @@ class Game:
         for row in self.grid.tiles:
             x = 0
             for tile in row:
-                if len(tile) > 0:
-                    if "p" in tile and "4" not in tile:
+                if tile.block is not None:
+                    if tile.block.value == "p":
                         self.player_block = Block(x, y, "p")
-                    elif len(tile) > 1 and "4" not in tile:
-                        self.blocks.append(Block(x,y, tile[1]))
+                    else:
+                        self.blocks.append(Block(x,y, tile.block.value))
                 x = x + 1
             y = y + 1
 
