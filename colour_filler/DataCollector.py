@@ -9,7 +9,7 @@ class DataCollector:
 
 
         # Winning path data
-        self.winning_path = Path()
+        # self.winning_path = Path()
         self.moves_to_win = 0
         self.map_percentage = 0
         self.unique_tiles_in_winning_path = 0
@@ -22,7 +22,7 @@ class DataCollector:
 
     def merge_data(self, data):
         # should aggregate data from given object
-        pass
+        self.winning_branches += data.winning_branches
 
     def calculate_value(self):
         pass
