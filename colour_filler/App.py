@@ -1,7 +1,7 @@
 import heapq
 
-from Block import Move
-from game import Game
+from game_objects.Block import Move
+from game_objects.game import Game
 
 level2 = "1;1;0|1;1a;0|1p;4a;4p"
 level8 = "0;0;0;4p;0|0;1;1;1a;4a|0;1;1b;1c;4b|4c;1;1;1p;1|0;0;0;1;0"
@@ -23,7 +23,7 @@ def solver(game_string):
         gs = game_states[state]
         for move in gs:
             if gs[move] is None:
-                g.set_state(state)
+                # g.set_state(state)
                 new_state = g.movement(move)
                 gs[move] = new_state
                 if new_state not in seen_states:

@@ -1,4 +1,4 @@
-from Cell import Cell
+from game_objects.Cell import Cell
 
 
 def create_tiles_from_string(s):

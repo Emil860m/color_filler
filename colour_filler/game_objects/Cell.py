@@ -1,6 +1,6 @@
 from enum import Enum
 
-from Block import Block
+from game_objects.Block import Block
 
 class Tile(Enum):
     EMPTY = 0

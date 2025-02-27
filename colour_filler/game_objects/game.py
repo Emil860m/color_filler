@@ -1,8 +1,8 @@
 from enum import Enum
 
-from Block import Block, Move
-from Cell import Tile
-from Grid import Grid
+from game_objects.Block import Block, Move
+from game_objects.Cell import Tile
+from game_objects.Grid import Grid
 
 
 class GameController(Enum):
