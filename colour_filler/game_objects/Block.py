@@ -3,9 +3,23 @@ from enum import Enum
 
 class Move(Enum):
     LEFT = 0
-    RIGHT = 1
-    UP = 2
+    UP = 1
+    RIGHT = 2
     DOWN = 3
+
+    @staticmethod
+    def opposite(move):
+        if move == Move.LEFT:
+            return Move.RIGHT
+        if move == Move.UP:
+            return Move.DOWN
+        if move == Move.RIGHT:
+            return Move.LEFT
+        if move == Move.DOWN:
+            return Move.UP
+        print("Invalid move")
+        exit(1)
+
 
 class Block:
     def __init__(self, x, y, value):

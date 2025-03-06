@@ -23,6 +23,7 @@ class DataCollector:
     def merge_data(self, data):
         # should aggregate data from given object
         self.winning_branches += data.winning_branches
+        self.dead_branches += data.dead_branches
 
     def calculate_value(self):
         pass

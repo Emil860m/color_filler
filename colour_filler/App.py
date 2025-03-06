@@ -5,6 +5,8 @@ from game_objects.game import Game
 
 level2 = "1;1;0|1;1a;0|1p;4a;4p"
 level8 = "0;0;0;4p;0|0;1;1;1a;4a|0;1;1b;1c;4b|4c;1;1;1p;1|0;0;0;1;0"
+level8 = "0;0;0;4c;0|0;1;1;1a;4a|0;1;1b;1c;4b|4p;1;1;1p;1|0;0;0;1;0"
+
 level9 = "0;1;1;1;1|4a;1;1b;1a;4p|1;1;1;1c;1|4c;0;4b;1p;1"
 
 
@@ -37,8 +39,8 @@ def solver(game_string):
                     shortest_path[new_state]["prev"] = shortest_path[state]["prev"]
     print(len(seen_states))
     print("Win" in seen_states)
-    prev = shortest_path["Win"]["prev"]
     print("Win in " + str(shortest_path["Win"]["length"]) + " steps")
+    prev = shortest_path["Win"]["prev"]
     while prev != game_string:
         print(prev)
         prev = shortest_path[prev]["prev"]
