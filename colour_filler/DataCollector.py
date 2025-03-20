@@ -6,6 +6,7 @@ class DataCollector:
         # unique game states data
         self.unique_game_states = 0
         self.game_states_set = set()
+        self.box_to_space_ratio = 0
 
 
         # Winning path data
@@ -13,12 +14,16 @@ class DataCollector:
         self.moves_to_win = 0
         self.map_percentage = 0
         self.unique_tiles_in_winning_path = 0
+        self.shortest_path = {}
+        self.blocks_pushed = 0
 
 
         # aggregated game states data
         self.aggregated_game_states = 0
         self.dead_branches = 0
         self.winning_branches = 0
+        self.local_entropy = 0
+        self.global_entropy = 0
 
     def merge_data(self, data):
         # should aggregate data from given object
