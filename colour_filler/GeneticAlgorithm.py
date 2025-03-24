@@ -66,3 +66,26 @@ def mutation(bitstring, r_mut):
         if rand() < r_mut:
             # flip the bit
             bitstring[i] = 1 - bitstring[i]
+
+
+# tests of gen algo
+
+# objective function
+def onemax(x):
+    return -sum(x)
+
+
+# define the total iterations
+n_iter = 100
+# bits
+n_bits = 20
+# define the population size
+n_pop = 100
+# crossover rate
+r_cross = 0.9
+# mutation rate
+r_mut = 1.0 / float(n_bits)
+# perform the genetic algorithm search
+best, score = genetic_algorithm(onemax, n_bits, n_iter, n_pop, r_cross, r_mut)
+print('Done!')
+print('f(%s) = %f' % (best, score))
