@@ -1,8 +1,7 @@
-import heapq
 import itertools
 import math
 import re
-from queue import Queue, SimpleQueue
+from queue import SimpleQueue
 
 from game_objects.Block import Move
 from game_objects.game import Game
@@ -26,13 +25,12 @@ class Tree:
                 branch = Branch(j)
                 branch.data.box_to_space_ratio = len(block_locations) / size
                 self.roots.append(branch)
-        # self.roots = [Branch(construct_game_state(floor, i, len(block_locations))) for i in self.puzzle_combinations]
         self.branches = {}
         self.floor_size = size
         for i in self.roots:
             self.branches[list(i.game_states)[0]] = i
 
-    def MCTS(self):
+    def evaluate(self):
         g = Game("1;1")
         for state in self.starting_game_states.copy():
             queue = SimpleQueue()
@@ -71,29 +69,17 @@ class Tree:
                                     b.reachable_from_branches.append(cb)
                                     branches[new_state] = b
                                     cb.branches.append(b)
-                                    cb.data.local_entropy += 1
+                                    cb.data.branch_count += 1
                         elif shortest_path[new_state]["length"] > shortest_path[current]["length"] + 1:
                             shortest_path[new_state]["length"] = shortest_path[current]["length"] + 1
                             shortest_path[new_state]["prev"] = shortest_path[current]["prev"]
                             shortest_path[new_state]["dir_from_prev"] = move
-                        # elif not new_state in self.branches.keys():
-                        #     self.branches[current].branches.append(self.branches[new_state])
-                        #     self.branches[new_state].reachable_from_branches.append(self.branches[current])
                         if new_state == "Lost":
                             branches[current].data.dead_branches += 1
                         elif new_state == "Win":
                             branches[current].data.winning_branches += 1
-            # print(len(seen_states))
-            # print(len(branches.keys()))
-            # print(len(set(branches.values())))
-            # for b in set(branches.values()):
-            #     if b.data.winning_branches > 0:
-            #         print(b.branches)
-            #         print(b.data.dead_branches)
-            #         print(b.data.winning_branches)
+
             if "Win" in shortest_path.keys():
-                # print(state + ": Win in " + str(shortest_path["Win"]["length"]) + " steps")
-                # print(len(set(branches.keys())))
                 branches[state].data.aggregated_game_states = len(set(branches.values()))
                 branches[state].data.unique_game_states = len(branches.keys())
                 branches[state].data.moves_to_win = str(shortest_path["Win"]["length"])
@@ -101,7 +87,6 @@ class Tree:
                 self.branches.update(branches)
                 prev = shortest_path["Win"]["prev"]
                 moves = [shortest_path["Win"]["dir_from_prev"]]
-                # print(str(shortest_path["Win"]["dir_from_prev"]) + " to Win")
                 unique_tiles_index_set = set()
                 while prev is not None:
                     split_state = re.split(r'[;|]', prev)
@@ -114,12 +99,10 @@ class Tree:
                 game = Game(state)
                 game.set_state(state)
                 moves.reverse()
-                # print(moves)
                 for move in moves:
                     s = game.movement(move)
                     if s != "Win":
                         game.set_state(s)
-                # print(game.pushes)
                 branches[state].data.unique_tiles_in_winning_path = len(unique_tiles_index_set)
                 branches[state].data.map_percentage = len(unique_tiles_index_set)/self.floor_size
                 branches[state].data.blocks_pushed = game.pushes
@@ -128,55 +111,10 @@ class Tree:
                 self.roots.remove(self.branches[state])
                 self.branches.pop(state)
                 self.starting_game_states.remove(state)
-
-            # print("------------------------------")
         seen_branches = set()
         for branch in self.roots:
             DFS(branch, seen_branches)
-            print(branch.data.global_entropy)
-        # print(len(set(self.branches.values())))
-        # counter = 0
-        # branches = list(set(self.branches.values()))
-        # winning_branches = set()
-        # while len(branches) > counter:
-        #     for b in branches:
-        #         if b.data.winning_branches > 0 and b not in winning_branches:
-        #             winning_branches.add(b)
-        #             if b.start_branch is not None:
-        #                 b.start_branch.data.winning_branches += 1
-        #             counter = 0
-        #             continue
-        #         if b not in winning_branches:
-        #             for child_branch in b.branches:
-        #                 if child_branch in winning_branches:
-        #                     winning_branches.add(b)
-        #                     if b.start_branch is not None:
-        #                         b.start_branch.data.winning_branches += 1
-        #                     counter = 0
-        #                     continue
-        #     counter += 1
-        # for b in winning_branches:
-        #     if b.start_branch is None:
-        #         print(b.data.winning_branches)
 
-
-        # for branch in self.roots:
-        #     print(branch.game_states[0])
-        #     data = branch.data
-        #     print(str(data.moves_to_win) + " moves to win")
-        #     print(str(data.aggregated_game_states) + " aggregated states")
-        #     print(str(data.unique_game_states) + " unique states")
-        #     print(str(data.map_percentage * 100) + "% of tiles used in winning path")
-        #     print(str(data.blocks_pushed) + " blocks pushed")
-        # print(len(self.starting_game_states))
-
-        # for branch in self.roots:
-        #     branch.check_moves_from_states(self.branches)
-        # for i in self.roots:
-        #     print(i.data.winning_branches)
-        # s = set(self.branches)
-        # print(s)
-        # print(len(self.branches))
 
 def DFS(branch, seen_branches):
     if len(branch.branches) > 0:
@@ -184,11 +122,14 @@ def DFS(branch, seen_branches):
         for b in branch.branches:
             if b not in seen_branches:
                 child_entropies.append(DFS(b, seen_branches))
-        branch.data.global_entropy = branch.data.local_entropy + min(child_entropies)
+        branch.data.global_entropy = calculate_local_entropy(branch.data.branch_count) + min(child_entropies)
         return branch.data.global_entropy
     if branch.data.winning_branches > 0:
-        return branch.data.local_entropy
+        return branch.data.branch_count
     return 999
+
+def calculate_local_entropy(count):
+    return round(math.log2(count),2)
 
 
 def shortest_path_player(root):
@@ -232,5 +173,5 @@ def construct_game_state(floor, combinations, block_count):
     return state_list
 # t = Tree([(1,1), (2,0)], [(2,1), (2,2)], "1;1;0|1;1;0|1;4;4")
 t = Tree([(1,3), (2,2), (2,3), (3,3)], [(0,3), (1,4), (2,4), (3,0)], "0;0;0;4;0|0;1;1;1;4|0;1;1;1;4|4;1;1;1;1|0;0;0;1;0", 15)
-t.MCTS()
+t.evaluate()
 # print(construct_game_state("1;1;0|1;1;0|1;4;4", [((1,1), (2,1)), ((2,0), (2,2))]))

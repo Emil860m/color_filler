@@ -1,6 +1,3 @@
-from Path import Path
-
-
 class DataCollector:
     def __init__(self):
         # unique game states data
@@ -22,7 +19,7 @@ class DataCollector:
         self.aggregated_game_states = 0
         self.dead_branches = 0
         self.winning_branches = 0
-        self.local_entropy = 0
+        self.branch_count = 0
         self.global_entropy = 0
 
     def merge_data(self, data):
