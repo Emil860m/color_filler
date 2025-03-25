@@ -1,10 +1,18 @@
 # genetic algorithm
+import random
+
 from numpy.random import randint, rand
 
+from tree_structure.Tree import Tree
 
-def genetic_algorithm(objective, n_bits, n_iter, n_pop, r_cross, r_mut):
+
+
+def genetic_algorithm(objective, n_bits, n_iter, n_pop, r_cross, r_mut, size, box_count):
+    # number of boxes, disappearing tiles, push tiles, level size (floor spaces)
     # initial population of random bitstring
-    pop = [randint(0, 2, n_bits).tolist() for _ in range(n_pop)]
+    # size * size array
+    # pop = [randint(0, 2, n_bits).tolist() for _ in range(n_pop)]
+    pop = [generate(size, box_count) for _ in range(n_pop)]
     # keep track of best solution
     best, best_eval = 0, objective(pop[0])
     # enumerate generations
@@ -33,6 +41,76 @@ def genetic_algorithm(objective, n_bits, n_iter, n_pop, r_cross, r_mut):
         pop = children
     return [best, best_eval]
 
+def generate(size, box_count):
+    generated = [[0 for i in range(size)] for j in range(size)]
+    x, y = int(randint(size)/2), int(randint(size)/2)
+    generated[x][y] = 1
+    flipped = 0
+    stack = [(x,y)]
+    while True:
+        (x, y) = stack.pop()
+        for i in range(-1, 2, 2):
+            if size-1 > x > 0 and generated[x + i][y] == 0:
+                generated[x + i][y] = 1
+                flipped += 1
+            if size-1 > y > 0 and generated[x][y + i] == 0:
+                generated[x][y + i] = 1
+                flipped += 1
+            if size-1 > x+i >= 0:
+                stack.append((x + i, y))
+            if size-1 > y+i >= 0:
+                stack.append((x, y + i))
+            random.shuffle(stack)
+        if flipped > 0.6 * size*size:
+            if validate(generated, size):
+                break
+    floor_tiles = []
+    for i in range(size):
+        for j in range(size):
+            if generated[i][j] == 1:
+                floor_tiles.append((i, j))
+    random.shuffle(floor_tiles)
+    for i in range(box_count):
+        generated[floor_tiles[i][0]][floor_tiles[i][1]] = 4
+    hole_locations = floor_tiles[:box_count]
+    box_locations = []
+
+    #TODO: add box location generation
+    return generated, hole_locations, box_locations
+
+def validate(level, size):
+    list_of_coords = []
+    for i in range(size):
+        for j in range(size):
+            if int(level[i][j]) > 0:
+                if len(list_of_coords) == 0:
+                    list_of_coords.extend(DFS(level, (i,j), size))
+                elif (i,j) not in list_of_coords:
+                    return False
+    return True
+
+def DFS(level, coords, size):
+    ret_list = [coords]
+    stack = []
+    seen_coords = set()
+    stack.append(coords)
+    seen_coords.add(coords)
+    while len(stack) > 0:
+        coord = stack.pop()
+        for i in range(-1, 2, 2):
+            x, y = coord
+            xi, yi = coord[0] + i, coord[1] + i
+            if size > xi >= 0 and (xi, y) not in seen_coords:
+                if level[xi][y] == 1:
+                    seen_coords.add((xi, y))
+                    stack.append((xi, y))
+                    ret_list.append((xi, y))
+            if size > yi >= 0 and (x, yi) not in seen_coords:
+                if level[x][yi] == 1:
+                    seen_coords.add((x, yi))
+                    stack.append((x, yi))
+                    ret_list.append((x, yi))
+    return ret_list
 
 # tournament selection
 def selection(pop, scores, k=3):
@@ -69,6 +147,10 @@ def mutation(bitstring, r_mut):
 
 
 # tests of gen algo
+def eval(levelstr, hole_loc, box_loc):
+    t = Tree()
+    t.MCTS()
+
 
 # objective function
 def onemax(x):
@@ -86,6 +168,6 @@ r_cross = 0.9
 # mutation rate
 r_mut = 1.0 / float(n_bits)
 # perform the genetic algorithm search
-best, score = genetic_algorithm(onemax, n_bits, n_iter, n_pop, r_cross, r_mut)
+best, score = genetic_algorithm(onemax, n_bits, n_iter, n_pop, r_cross, r_mut, 5, 3)
 print('Done!')
 print('f(%s) = %f' % (best, score))
