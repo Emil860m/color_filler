@@ -24,7 +24,14 @@ class Grid:
             print("")
 
     def get_tile(self, x, y):
+        if type(self.tiles[x][y]) is not Cell:
+            print(type(self.tiles[x][y]), end=" ")
+            print(self.tiles[x][y])
+        assert type(self.tiles[x][y]) is Cell
         return self.tiles[y][x]
 
     def set_tile(self, x, y, tile):
-        self.tiles[y][x] = tile
+        # if type(tile) is not Cell:
+        #     print(type(tile), "should be cell at", x, y)
+        #     self.print_grid()
+        self.tiles[y][x] = Cell(x, y, tile)
