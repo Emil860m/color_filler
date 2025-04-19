@@ -56,6 +56,7 @@ def get_tile_from_str(tile_str):
         return Tile.PUSH_DOWN
     elif tile_str == "8":
         return Tile.PUSH_UP
+    print("Error", tile_str)
 
 
 class Cell:

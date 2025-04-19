@@ -135,7 +135,7 @@ class Game:
         return False
 
     def set_state(self, state):
-        if state is "Lost" or state is "Win":
+        if state == "Lost" or state == "Win":
             print("state is Lost or win:", state)
             assert not (state == "Lost" or state == "Win")
         if not state is None:
