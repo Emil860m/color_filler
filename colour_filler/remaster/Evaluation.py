@@ -12,17 +12,24 @@ class Branch:
         self.children = list()
         self.child_entropies = {}
         self.entropy = 0
+        self.can_win = False
 
     def add_child(self, child):
         if child not in self.children and not child == "Lost":
             self.children.append(child)
 
-    def get_entropy(self):
+    def get_entropy(self, branches):
+        can_win_count = 0
+        for child in self.children:
+            if branches[child].can_win:
+                can_win_count += 1
         if len(self.children) == 0:
             return 999.0
         # if "Lost" in self.children and len(self.children) > 1:
         #     return round(math.log2(len(self.children) - 1), 1)
-        return round(math.log2(len(self.children)), 1)
+        if self.can_win:
+            return round(math.log2(len(self.children) - (can_win_count - 1)), 1)
+        return 999.0
 
 
 def evaluation(level):
@@ -63,16 +70,19 @@ def recursive_evaluation(current_level, seen_states, branches, game_states, shor
             branches[new_branch] = Branch(new_state)
             assert old_branch in branches.keys()
             branches[old_branch].add_child(new_branch)
+        if new_state == "Win":
+            branches[old_branch].can_win = True
         gs[move] = new_state
         if new_state not in seen_states:
             shortest_path[new_state] = {"prev": current_level, "length": shortest_path[current_level]["length"] + 1}
             seen_states.add(new_state)
             if new_state != "Lost" and new_state != "Win":
                 game_states[new_state] = {Move.RIGHT: None, Move.LEFT: None, Move.UP: None, Move.DOWN: None}
-                recursive_evaluation(new_state, seen_states, branches, game_states, shortest_path)
+                branches[old_branch].can_win = branches[old_branch].can_win or recursive_evaluation(new_state, seen_states, branches, game_states, shortest_path)
         elif shortest_path[new_state]["length"] > shortest_path[current_level]["length"] + 1:
             shortest_path[new_state]["length"] = shortest_path[current_level]["length"] + 1
             shortest_path[new_state]["prev"] = shortest_path[current_level]["prev"]
+    return branches[old_branch].can_win
 
 
 def recursive_find_entropies(branch_name, branches, seen_branches, branch_entropies):
@@ -90,11 +100,12 @@ def recursive_find_entropies(branch_name, branches, seen_branches, branch_entrop
             entropies.append(branch_entropies[b])
     if len(entropies) == 0:
         return 999
-    branch_entropies[branch_name] = branch.get_entropy() + min(entropies)
-    return branch.get_entropy() + min(entropies)
+    branch_entropies[branch_name] = branch.get_entropy(branches) + min(entropies)
+    return branch.get_entropy(branches) + min(entropies)
 
 
 if __name__ == '__main__':
-    level8 = "0;0;1;1;0|0;4p;1;1;0|2;1b;1;1;0|1;1a;1c;4c;4a|1p;1;1;2;4b"
+    # level8 = "0;0;1;1;0|0;4p;1;1;0|2;1b;1;1;0|1;1a;1c;4c;4a|1p;1;1;2;4b"
+    level8 = "0;0;0;4p;0|0;1;1;1a;4a|0;1;1b;1c;4b|4c;1;1;1p;1|0;0;0;1;0"
     # level2 = "1;1;0|1;1a;0|1p;4a;4p"
     print(evaluation(level8))
