@@ -10,6 +10,38 @@ class GameController(Enum):
     LOST = 0
     WON = 2
 
+def check_level(level):
+    valid = True
+    if "1p" in level:
+        if "4p" not in level:
+            valid = False
+    elif "4p" in level:
+        valid = False
+
+    if "1a" in level:
+        if "4a" not in level:
+            valid = False
+    elif "4a" in level:
+        valid = False
+
+    if "1b" in level:
+        if "4b" not in level:
+            valid = False
+    elif "4b" in level:
+        valid = False
+
+    if "1c" in level:
+        if "4c" not in level:
+            valid = False
+    elif "4c" in level:
+        valid = False
+
+    if "1d" in level:
+        if "4d" not in level:
+            valid = False
+    elif "4d" in level:
+        valid = False
+    return valid
 class Game:
     def __init__(self, state=None, grid=None):
         if not state is None:
@@ -106,6 +138,8 @@ class Game:
 
     def set_state(self, state):
         if not state is None:
+            # if not check_level(state):
+            #     print("ERROR", state)
             self.grid = Grid(state=state)
         else:
             print("State or tiles must be provided")

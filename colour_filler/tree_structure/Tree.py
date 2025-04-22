@@ -17,7 +17,9 @@ class Tree:
             lst = []
             for i in range(len(hc)):
                 lst.append((block_locations[i], hc[i]))
-            self.puzzle_combinations.append(lst)
+            if lst not in self.puzzle_combinations:
+                self.puzzle_combinations.append(lst)
+        # print(self.puzzle_combinations)
         self.roots = []
         self.starting_game_states = []
         for i in self.puzzle_combinations:
@@ -26,11 +28,16 @@ class Tree:
                 branch = Branch(j)
                 branch.data.box_to_space_ratio = len(block_locations) / size
                 self.roots.append(branch)
+        # self.roots = [Branch("1;1b;4b;4c;0|1;1;1p;8;1|1;1;1;1c;4p|0;0;1;1;0|0;0;0;1;0")]
+        # self.starting_game_states = ["1;1b;4b;4c;0|1;1;1p;8;1|1;1;1;1c;4p|0;0;1;1;0|0;0;0;1;0"]
         # self.roots = [Branch(construct_game_state(floor, i, len(block_locations))) for i in self.puzzle_combinations]
         self.branches = {}
         self.floor_size = size
         for i in self.roots:
             self.branches[list(i.game_states)[0]] = i
+        for i in self.starting_game_states:
+            if i not in self.branches.keys():
+                print("Error at ", i)
 
     def MCTS(self):
         g = Game("1;1")
@@ -72,7 +79,52 @@ class Tree:
                                     branches[new_state] = b
                                     cb.branches.append(b)
                                     cb.data.local_entropy += 1
-                        elif shortest_path[new_state]["length"] > shortest_path[current]["length"] + 1:
+                        # TODO: maybe for pushtiles
+                        # else:
+                        #     if not (new_state == "Lost" or new_state == "Win"):
+                        #         branch1 = ["1;1;1;1;0|1;1;1;8;1|1;1;1;1p;4p|0;0;1;1;0|0;0;0;1;0",
+                        #                    "1;1;1;1;0|1;1;1;8;1|1;1;1p;1;4p|0;0;1;1;0|0;0;0;1;0",
+                        #                    "1;1;1;1;0|1;1;1;8;1|1;1;1;1;4p|0;0;1;1p;0|0;0;0;1;0",
+                        #                    "1;1;1;1;0|1;1;1;8;1|1;1p;1;1;4p|0;0;1;1;0|0;0;0;1;0",
+                        #                    "1;1;1;1;0|1;1;1p;8;1|1;1;1;1;4p|0;0;1;1;0|0;0;0;1;0",
+                        #                    "1;1;1;1;0|1;1;1;8;1|1;1;1;1;4p|0;0;1p;1;0|0;0;0;1;0",
+                        #                    "1;1;1;1;0|1;1;1;8;1|1;1;1;1;4p|0;0;1;1;0|0;0;0;1p;0",
+                        #                    "1;1;1;1;0|1;1;1;8;1|1p;1;1;1;4p|0;0;1;1;0|0;0;0;1;0"]
+                        #         branch2 = ["1;1p;1;1;0|1;1;1;8;1|1;1;1;1;4p|0;0;1;1;0|0;0;0;1;0", "1;1;1p;1;0|1;1;1;8;1|1;1;1;1;4p|0;0;1;1;0|0;0;0;1;0", "1p;1;1;1;0|1;1;1;8;1|1;1;1;1;4p|0;0;1;1;0|0;0;0;1;0", "1;1;1;1;0|1;1p;1;8;1|1;1;1;1;4p|0;0;1;1;0|0;0;0;1;0", "1;1;1;1;0|1p;1;1;8;1|1;1;1;1;4p|0;0;1;1;0|0;0;0;1;0"]
+                        #         if new_state in branch1:
+                        #             print("branch1")
+                        #             print(branches[new_state].branches)
+                        #             print(branches[new_state].branches[0].game_states)
+                        #             for b in branches[new_state].branches:
+                        #                 for gs in b.game_states:
+                        #                     if gs in branch2:
+                        #                         print("should work1")
+                        #         if new_state in branch2:
+                        #             print("branch2")
+                        #             print(branches[new_state].branches)
+                        #             for b in branches[new_state].branches:
+                        #                 for gs in b.game_states:
+                        #                     if gs in branch1:
+                        #                         print("should work2")
+                        #         # if new_state == "1;1;1;1;0|1;1p;1;8;1|1;1;1;1;4p|0;0;1;1;0|0;0;0;1;0":
+                        #         #     print(game_states[new_state])
+                        #         if not branches[new_state] == branches[current]:
+                        #             # print(new_state)
+                        #             # print(branches[new_state].branches, branches[current])
+                        #             if branches[current] in branches[new_state].branches:
+                        #                 branch = branches[new_state]
+                        #                 branch.branches.extend(branches[current].branches)
+                        #                 branch.game_states.extend(branches[current].game_states)
+                        #                 branch.branches.remove(branches[current])
+                        #                 branch.data.winning_branches += branches[current].data.winning_branches
+                        #                 branch.data.local_entropy -= 1
+                        #                 list(set(branch.branches))
+                        #                 list(set(branch.game_states))
+                        #                 branches[current] = branch
+                        #                 print("--------")
+                        #             # print(branches[new_state])
+                        #             # print(new_state, current)
+                        if shortest_path[new_state]["length"] > shortest_path[current]["length"] + 1:
                             shortest_path[new_state]["length"] = shortest_path[current]["length"] + 1
                             shortest_path[new_state]["prev"] = shortest_path[current]["prev"]
                             shortest_path[new_state]["dir_from_prev"] = move
@@ -83,6 +135,21 @@ class Tree:
                             branches[current].data.dead_branches += 1
                         elif new_state == "Win":
                             branches[current].data.winning_branches += 1
+            # TODO: maybe for pushtiles
+            # for b1 in branches:
+            #     for b2 in branches[b1].branches:
+            #         print(b2)
+            #         print(b1)
+            #         if b2 in b1:
+            #             branches[b2].branches.extend(b1.branches)
+            #             branches[b2].game_states.extend(b1.game_states)
+            #             branches[b2].branches.remove(b1)
+            #             branches[b2].data.winning_branches += b1.data.winning_branches
+            #             branches[b2].data.local_entropy -= 1
+            #             list(set(branches[b2].branches))
+            #             list(set(branches[b2].game_states))
+            #             b1 = branches[b2]
+            # print("gs",  branches["1;1;1;1;0|1;1;1p;8;1|1;1;1;1;4p|0;0;1;1;0|0;0;0;1;0"].game_states)
             # print(len(seen_states))
             # print(len(branches.keys()))
             # print(len(set(branches.values())))
@@ -115,14 +182,14 @@ class Tree:
                 game.set_state(state)
                 moves.reverse()
                 # print(moves)
-                for move in moves:
-                    s = game.movement(move)
-                    if s != "Win":
-                        game.set_state(s)
-                # print(game.pushes)
-                branches[state].data.unique_tiles_in_winning_path = len(unique_tiles_index_set)
-                branches[state].data.map_percentage = len(unique_tiles_index_set)/self.floor_size
-                branches[state].data.blocks_pushed = game.pushes
+                # for move in moves:
+                #     s = game.movement(move)
+                #     if s != "Win":
+                #         game.set_state(s)
+                # # print(game.pushes)
+                # branches[state].data.unique_tiles_in_winning_path = len(unique_tiles_index_set)
+                # branches[state].data.map_percentage = len(unique_tiles_index_set)/self.floor_size
+                # branches[state].data.blocks_pushed = game.pushes
 
             else:
                 self.roots.remove(self.branches[state])
@@ -133,7 +200,6 @@ class Tree:
         seen_branches = set()
         for branch in self.roots:
             DFS(branch, seen_branches)
-            print(branch.data.global_entropy)
         # print(len(set(self.branches.values())))
         # counter = 0
         # branches = list(set(self.branches.values()))
@@ -179,9 +245,9 @@ class Tree:
         # print(len(self.branches))
 
 def DFS(branch, seen_branches):
-    if len(branch.branches) > 0:
+    if len(branch.branch_count) > 0:
         child_entropies = []
-        for b in branch.branches:
+        for b in branch.branch_count:
             if b not in seen_branches:
                 child_entropies.append(DFS(b, seen_branches))
         branch.data.global_entropy = branch.data.local_entropy + min(child_entropies)
@@ -197,11 +263,8 @@ def shortest_path_player(root):
     moves = []
     prev = root.data.shortest_path["Win"]["prev"]
     while prev is not state:
-        print(prev)
         moves.append(root.data.shortest_path[prev]["dir_from_prev"])
         prev = root.data.shortest_path[prev]["prev"]
-    for move in moves:
-        print(game.movement(move))
 
 
 
@@ -232,6 +295,11 @@ def construct_game_state(floor, combinations, block_count):
     return state_list
 if __name__ == '__main__':
     # t = Tree([(1,1), (2,0)], [(2,1), (2,2)], "1;1;0|1;1;0|1;4;4")
-    t = Tree([(1,3), (2,2), (2,3), (3,3)], [(0,3), (1,4), (2,4), (3,0)], "0;0;0;4;0|0;1;1;1;4|0;1;1;1;4|4;1;1;1;1|0;0;0;1;0", 15)
+    # t = Tree([(1,3), (2,2), (2,3), (3,3)], [(0,3), (1,4), (2,4), (3,0)], "0;0;0;4;0|0;1;1;1;4|0;1;1;1;4|4;1;1;1;1|0;0;0;1;0", 15)
+    # t = Tree([(1,2), (2,1), (2,2), (3,3)], [(2,3), (2,4), (2,5), (2,6)], "1;1;1;0;0;0;0|1;0;1;1;1;1;1|1;1;1;4;4;4;4|1;0;1;1;0;0;0|1;1;1;0;0;0;0|0;0;0;0;0;0;0|0;0;0;0;0;0;0", 31)
+    t = Tree([(1,2), (2,2), (2,7), (3,7)], [(2,4), (3,3), (3,9), (4,8)], "1;1;1;0;0;0;0;0;0;0|1;1;1;1;2;2;1;2;0;0|0;1;1;1;4;1;1;1;1;1|0;0;1;4;1;0;1;1;1;4|0;0;0;0;0;0;0;1;4;1|0;0;0;0;0;0;0;0;0;0|0;0;0;0;0;0;0;0;0;0|0;0;0;0;0;0;0;0;0;0|0;0;0;0;0;0;0;0;0;0|0;0;0;0;0;0;0;0;0;0", 31)
     t.MCTS()
     # print(construct_game_state("1;1;0|1;1;0|1;4;4", [((1,1), (2,1)), ((2,0), (2,2))]))
+
+
+# 0;0;0;0;0;4b;0;0;0|2;4c;0;0;0;1;2;4d;0|2;1;1;2;2;1a;1p;1c;0|4a;1;1;0;0;1;1d;1;1|0;0;1;2;2;1b;1;1;1|0;0;0;0;0;0;2;2;4p

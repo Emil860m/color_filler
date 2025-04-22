@@ -50,8 +50,8 @@ class Branch:
                         self.branches.append(branches[new_state])
         print("done", self.game_states)
         for b in self.branches:
-            if self in b.branches:
-                print("merging", b.branches)
+            if self in b.branch_count:
+                print("merging", b.branch_count)
                 self.merge_branch(b, branches)
         for b in self.branches:
             if b not in branches.values():
