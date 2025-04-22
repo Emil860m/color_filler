@@ -1,9 +1,11 @@
 import functools
 import random
+import sys
+from typing import Any
 
 from remaster.Evaluation import evaluation
 
-
+sys.setrecursionlimit(1_000_000)
 def genetic_algorithm(n_pop, n_iter, r_mut, size, box_count, special_tiles, target=1000):
     pop = [generate_level(size, box_count, special_tiles) for _ in range(n_pop)]
 
@@ -12,9 +14,9 @@ def genetic_algorithm(n_pop, n_iter, r_mut, size, box_count, special_tiles, targ
     for i in range(n_pop):
         if scores[i] < best_eval:
             best, best_eval = pop[i], scores[i]
-            print(">%d, new best f(%s) = %.3f, length: %d" % (0, array_to_str(pop[i]), target - scores[i], len(get_floor_tiles(best, size))))
+            # print(">%d, new best f(%s) = %.3f, length: %d" % (0, array_to_str(pop[i]), target - scores[i], len(get_floor_tiles(best, size))))
     for gen in range(1, n_iter):
-        print(str(gen))
+        print(str(gen), end="")
         selected = [selection(pop, scores) for _ in range(n_pop-1)]
         children = [best]
         for i in range(0, n_pop-1):
@@ -28,7 +30,7 @@ def genetic_algorithm(n_pop, n_iter, r_mut, size, box_count, special_tiles, targ
         for i in range(n_pop):
             if scores[i] < best_eval:
                 best, best_eval = pop[i], scores[i]
-                print(">%d, new best f(%s) = %.3f, length: %d" % (gen, array_to_str(pop[i]), target - scores[i], len(get_floor_tiles(best, size))))
+                # print(">%d, new best f(%s) = %.3f, length: %d" % (gen, array_to_str(pop[i]), target - scores[i], len(get_floor_tiles(best, size))))
         if best_eval < 0 + (target * 0.1):
             break
     print("")
@@ -39,11 +41,11 @@ def validate(level) -> bool:
     return evaluation(array_to_str(level)) >= 0
 
 
-def str_to_array(level_str):
+def str_to_array(level_str) -> list[list[str]]:
     return [[cell for cell in row.split(";")] for row in level_str.split("|")]
 
 
-def array_to_str(level_array):
+def array_to_str(level_array) -> str:
     level_str = ""
     for row in level_array:
         for cell in row:
@@ -55,7 +57,7 @@ def array_to_str(level_array):
     return level_str
 
 
-def get_floor_tiles(level_array, size) -> []:
+def get_floor_tiles(level_array, size) -> list[tuple[int, int]]:
     tiles = []
     for i in range(size):
         for j in range(size):
@@ -65,8 +67,8 @@ def get_floor_tiles(level_array, size) -> []:
     return tiles
 
 
-def generate_level(size, box_count, special_tiles) -> []:
-    print("|", end="")
+def generate_level(size, box_count, special_tiles) -> list[list[str]]:
+    # print("|", end="")
     level = [["0" for _ in range(size)] for _ in range(size)]
     x, y = random.randrange(0, size), random.randrange(0, size)
     stck = [(x, y)]
@@ -151,20 +153,24 @@ def evaluate(level, target) -> int:
 
 
 if __name__ == "__main__":
-    for p in range(1):
-        target = 1000
-        size = 4
-        box_count = 3
-        special_tiles = 10
-        # define the total iterations
-        n_iter = 50
-        # define the population size
-        n_pop = 50
-        # mutation rate
-        r_mut = 1.0 / float(size * 2)
-        # n_pop, n_iter, r_cross, r_mut, size, box_count, special_tiles
-        lst = genetic_algorithm(n_pop, n_iter, r_mut, size, box_count, special_tiles, target=target)
-        print(array_to_str(lst[0]), target - lst[1])
-        if not target - lst[1] == -1:
-            with open("generatedLevels.txt", "a") as file:
-                file.write(array_to_str(lst[0]) + " " + str(target - lst[1]) + "\n")
+    for p in range(100):
+        target_entropy = 1000
+        size_of_side = p % 2 + 4
+        number_of_boxes = p % 3 + 3
+        disappearing_tiles = p % 8
+        if size_of_side * size_of_side >= (number_of_boxes * 2) + disappearing_tiles + 2:
+            # define the total iterations
+            iterations = 100
+            # define the population size
+            population_size = 50
+            # mutation rate
+            mutation_factor = 1.0 / float(size_of_side * 2)
+            # n_pop, n_iter, r_cross, r_mut, size, box_count, special_tiles
+            try:
+                lst = genetic_algorithm(population_size, iterations, mutation_factor, size_of_side, number_of_boxes, disappearing_tiles, target=target_entropy)
+                print(array_to_str(lst[0]), target_entropy - lst[1])
+                if not target_entropy - lst[1] == -1:
+                    with open("generatedLevels.txt", "a") as file:
+                        file.write(array_to_str(lst[0]) + " " + str(target_entropy - lst[1]) + "\n")
+            except Exception as e:
+                print(e)
