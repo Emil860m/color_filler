@@ -1,7 +1,5 @@
-import functools
 import random
 import sys
-from typing import Any
 
 from remaster.Evaluation import evaluation
 
@@ -75,7 +73,6 @@ def generate_level(size, box_count, special_tiles) -> list[list[str]]:
     counter = 0
     tile_counter = 0
     while counter < size * size or tile_counter < (box_count * 2 + special_tiles):
-    # for _ in range(size * size):
         x, y = stck.pop()
         counter += 1
         if level[x][y] == "0":
@@ -88,8 +85,6 @@ def generate_level(size, box_count, special_tiles) -> list[list[str]]:
                 stck.append((x, y + i))
         random.shuffle(stck)
     level_copy = array_to_str(level)
-    # validated = False
-    # while not validated:
     level = str_to_array(level_copy)
     floor_tiles = get_floor_tiles(level, size)
     for x, y in floor_tiles[:special_tiles]:
@@ -103,15 +98,12 @@ def generate_level(size, box_count, special_tiles) -> list[list[str]]:
     for x, y in floor_tiles[special_tiles + box_count:special_tiles + box_count + box_count]:
         level[x][y] += letters[count]
         count += 1
-    # validated = validate(level)
     return level
 
 
 def selection(pop, scores, k=3) -> []:
-    # first random selection
     selection_ix = random.randrange(len(pop))
     for ix in range(random.randrange(0, len(pop), k - 1)):
-        # check if better (e.g. perform a tournament)
         if scores[ix] < scores[selection_ix]:
             selection_ix = ix
     return pop[selection_ix]
