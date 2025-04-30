@@ -18,14 +18,21 @@ class Stats:
 
 class Session:
     def __init__(self, lines):
+        # TODO: Prøv at tilføje ordering på levels og se om ordering har haft effekt på rankings
+        # TODO: Analyser også inputs, resets og time data
         self.PXI = {}
-        for i in range(11):
-            self.PXI[lines[i + 2].split("=")[0]] = int(lines[i + 2].split("=")[1])
-        self.rankings = []
-        self.stats = {}
-        for i in range(9):
-            self.rankings.append(lines[i + 14].split("=")[1])
-            self.stats[lines[i + 24].split("?")[0]] = Stats(lines[i + 24].split("?")[1])
+        try:
+            for i in range(11):
+                self.PXI[lines[i + 2].split("=")[0]] = int(lines[i + 2].split("=")[1])
+            self.rankings = []
+            self.stats = {}
+            for i in range(9):
+                self.rankings.append(lines[i + 14].split("=")[1])
+                self.stats[lines[i + 24].split("?")[0]] = Stats(lines[i + 24].split("?")[1])
+        except Exception as e:
+            print(e)
+            print(lines)
+            exit(1)
 
     def print_this(self):
         for r in self.rankings:
@@ -48,7 +55,7 @@ with open("ColorFillerData.txt", "r") as file:
     linesc = []
     for s in lines:
         linesc.append(s.rstrip())
-    while (i + 1) * 31 < len(linesc):
+    while (i + 1) * 32 < len(linesc):
         ses = Session(linesc[i * 33:(i * 33) + 33])
         ses.print_this()
         sessions.append(ses)
@@ -78,7 +85,9 @@ print("\nRanking matrix with expected rankings:")
 print(df)
 
 # Step 1: ranks array (items x raters)
-ranks = df[['Rater1', 'Rater2', 'Expected']].to_numpy()
+raters = ['Rater' + str(i + 1) for i in range(len(sessions))]
+raters.append('Expected')
+ranks = df[raters].to_numpy()
 
 # Step 2: compute Kendall's W manually
 n_items, n_raters = ranks.shape
