@@ -1,0 +1,594 @@
+NewEntry
+PXI
+I liked the look and feel of the game=7
+The game was not too easy and not too hard to play=7
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=2
+I felt free to play the game in my own way=4
+I wanted to explore how the game evolved=5
+I was fully focused on the game=6
+I felt I was good at playing this game=6
+Playing the game was meaningful to me=7
+I had a good time playing this game=6
+RANKINGS
+Rank0=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank1=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank2=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank3=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank4=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank5=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank6=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank7=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank8=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+STATS
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=61&resets=1&time=32673
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=96&resets=1&time=38947
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=26&resets=0&time=12389
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=10&resets=0&time=14873
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=13&resets=0&time=10157
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=21&resets=0&time=11041
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=34&resets=0&time=15673
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=24&resets=0&time=14123
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=110&resets=4&time=138415
+NewEntry
+PXI
+I liked the look and feel of the game=7
+The game was not too easy and not too hard to play=6
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=6
+I felt free to play the game in my own way=7
+I wanted to explore how the game evolved=5
+I was fully focused on the game=6
+I felt I was good at playing this game=6
+Playing the game was meaningful to me=5
+I had a good time playing this game=7
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank2=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank3=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank4=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank5=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank6=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank7=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank8=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+STATS
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=32&resets=0&time=37855
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=40&resets=2&time=37004
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=36&resets=0&time=21223
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=26&resets=0&time=17290
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=8&resets=0&time=10656
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=17&resets=0&time=15556
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=17&resets=0&time=13174
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=51&resets=1&time=27263
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=90&resets=1&time=44413
+NewEntry
+PXI
+I liked the look and feel of the game=6
+The game was not too easy and not too hard to play=5
+It was easy to know how to perform actions in the game=3
+The goals of the game were clear to me=6
+The game gave clear feedback on my progress towards the goals=3
+I felt free to play the game in my own way=5
+I wanted to explore how the game evolved=5
+I was fully focused on the game=4
+I felt I was good at playing this game=4
+Playing the game was meaningful to me=5
+I had a good time playing this game=6
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank2=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank3=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank4=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank5=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank6=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank7=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank8=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+STATS
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=18&resets=2&time=138441
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=75&resets=2&time=279071
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=55&resets=1&time=182548
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=70&resets=2&time=233688
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=69&resets=2&time=282172
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=19&resets=1&time=64079
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=62&resets=0&time=224392
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=68&resets=2&time=231039
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=19&resets=0&time=60757
+NewEntry
+PXI
+I liked the look and feel of the game=6
+The game was not too easy and not too hard to play=3
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=6
+I felt free to play the game in my own way=6
+I wanted to explore how the game evolved=5
+I was fully focused on the game=7
+I felt I was good at playing this game=5
+Playing the game was meaningful to me=1
+I had a good time playing this game=6
+RANKINGS
+Rank0=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank1=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank2=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank3=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank4=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank5=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank6=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank7=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank8=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+STATS
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=24&resets=0&time=49971
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=64&resets=0&time=44874
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=28&resets=0&time=22173
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=17&resets=0&time=13806
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=88&resets=1&time=89913
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=36&resets=0&time=24457
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=42&resets=0&time=29472
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=47&resets=1&time=45496
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=10&resets=0&time=11523
+NewEntry
+PXI
+I liked the look and feel of the game=7
+The game was not too easy and not too hard to play=6
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=5
+I felt free to play the game in my own way=4
+I wanted to explore how the game evolved=5
+I was fully focused on the game=5
+I felt I was good at playing this game=3
+Playing the game was meaningful to me=3
+I had a good time playing this game=7
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank2=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank3=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank4=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank5=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank6=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank7=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank8=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+STATS
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=50&resets=0&time=64712
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=32&resets=0&time=21140
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=30&resets=0&time=27087
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=35&resets=0&time=40290
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=8&resets=0&time=10273
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=122&resets=2&time=125970
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=38&resets=1&time=28829
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=17&resets=0&time=18889
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=52&resets=2&time=52951
+NewEntry
+PXI
+I liked the look and feel of the game=5
+The game was not too easy and not too hard to play=7
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=4
+I felt free to play the game in my own way=7
+I wanted to explore how the game evolved=4
+I was fully focused on the game=6
+I felt I was good at playing this game=6
+Playing the game was meaningful to me=5
+I had a good time playing this game=6
+RANKINGS
+Rank0=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank1=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank2=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank3=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank4=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank5=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank6=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank7=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank8=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+STATS
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=71&resets=3&time=158987
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=28&resets=0&time=35141
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=52&resets=1&time=93715
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=78&resets=2&time=100020
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=19&resets=0&time=18889
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=104&resets=3&time=110859
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=50&resets=1&time=64863
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=8&resets=0&time=9439
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=17&resets=0&time=15075
+NewEntry
+PXI
+I liked the look and feel of the game=7
+The game was not too easy and not too hard to play=7
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=5
+I felt free to play the game in my own way=7
+I wanted to explore how the game evolved=6
+I was fully focused on the game=7
+I felt I was good at playing this game=6
+Playing the game was meaningful to me=2
+I had a good time playing this game=7
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank2=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank3=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank4=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank5=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank6=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank7=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank8=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+STATS
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=54&resets=3&time=160617
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=42&resets=2&time=37537
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=55&resets=2&time=118354
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=10&resets=0&time=17922
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=61&resets=0&time=75574
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=54&resets=1&time=44080
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=43&resets=0&time=44339
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=15&resets=0&time=13590
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=21&resets=0&time=12327
+NewEntry
+PXI
+I liked the look and feel of the game=6
+The game was not too easy and not too hard to play=7
+It was easy to know how to perform actions in the game=5
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=6
+I felt free to play the game in my own way=7
+I wanted to explore how the game evolved=6
+I was fully focused on the game=7
+I felt I was good at playing this game=6
+Playing the game was meaningful to me=5
+I had a good time playing this game=7
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank2=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank3=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank4=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank5=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank6=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank7=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank8=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+STATS
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=57&resets=4&time=131396
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=10&resets=0&time=17789
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=44&resets=0&time=64274
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=18&resets=0&time=13774
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=17&resets=0&time=19324
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=24&resets=0&time=13987
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=38&resets=0&time=24007
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=96&resets=1&time=62829
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=42&resets=0&time=45457
+NewEntry
+PXI
+I liked the look and feel of the game=7
+The game was not too easy and not too hard to play=7
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=5
+I felt free to play the game in my own way=7
+I wanted to explore how the game evolved=7
+I was fully focused on the game=6
+I felt I was good at playing this game=5
+Playing the game was meaningful to me=5
+I had a good time playing this game=6
+RANKINGS
+Rank0=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank1=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank2=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank3=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank4=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank5=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank6=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank7=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank8=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+STATS
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=15&resets=0&time=21347
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=71&resets=3&time=117092
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=36&resets=0&time=44091
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=162&resets=5&time=177421
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=8&resets=0&time=18206
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=86&resets=4&time=176714
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=29&resets=1&time=40161
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=13&resets=0&time=12040
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=36&resets=0&time=31522
+NewEntry
+PXI
+I liked the look and feel of the game=6
+The game was not too easy and not too hard to play=7
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=4
+I felt free to play the game in my own way=5
+I wanted to explore how the game evolved=7
+I was fully focused on the game=6
+I felt I was good at playing this game=7
+Playing the game was meaningful to me=5
+I had a good time playing this game=7
+RANKINGS
+Rank0=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank1=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank2=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank3=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank4=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank5=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank6=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank7=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank8=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+STATS
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=15&resets=0&time=20262
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=20&resets=0&time=37292
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=37&resets=1&time=49628
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=30&resets=1&time=47129
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=28&resets=0&time=21241
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=8&resets=0&time=12890
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=32&resets=0&time=35941
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=70&resets=1&time=49863
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=45&resets=1&time=38562
+NewEntry
+PXI
+I liked the look and feel of the game=6
+The game was not too easy and not too hard to play=6
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=4
+The game gave clear feedback on my progress towards the goals=1
+I felt free to play the game in my own way=3
+I wanted to explore how the game evolved=2
+I was fully focused on the game=5
+I felt I was good at playing this game=5
+Playing the game was meaningful to me=4
+I had a good time playing this game=6
+RANKINGS
+Rank0=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank1=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank2=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank3=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank4=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank5=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank6=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank7=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank8=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+STATS
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=27&resets=0&time=23116
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=44&resets=0&time=69007
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=35&resets=0&time=79391
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=15&resets=0&time=23456
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=8&resets=0&time=19856
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=52&resets=0&time=79006
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=90&resets=2&time=807336
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=30&resets=1&time=37250
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=48&resets=2&time=40460
+NewEntry
+PXI
+I liked the look and feel of the game=6
+The game was not too easy and not too hard to play=3
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=6
+I felt free to play the game in my own way=5
+I wanted to explore how the game evolved=6
+I was fully focused on the game=6
+I felt I was good at playing this game=7
+Playing the game was meaningful to me=5
+I had a good time playing this game=5
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank2=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank3=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank4=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank5=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank6=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank7=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank8=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+STATS
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=63&resets=2&time=97211
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=36&resets=0&time=40006
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=27&resets=0&time=17155
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=39&resets=0&time=34757
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=47&resets=0&time=30990
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=8&resets=0&time=13507
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=13&resets=0&time=14472
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=17&resets=0&time=13423
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=32&resets=1&time=24114
+NewEntry
+PXI
+I liked the look and feel of the game=6
+The game was not too easy and not too hard to play=3
+It was easy to know how to perform actions in the game=6
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=5
+I felt free to play the game in my own way=2
+I wanted to explore how the game evolved=7
+I was fully focused on the game=6
+I felt I was good at playing this game=5
+Playing the game was meaningful to me=4
+I had a good time playing this game=6
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank2=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank3=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank4=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank5=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank6=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank7=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank8=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+STATS
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=26&resets=0&time=20459
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=37&resets=1&time=43478
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=31&resets=0&time=37286
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=29&resets=0&time=45717
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=8&resets=0&time=13725
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=39&resets=0&time=46359
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=53&resets=1&time=90719
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=17&resets=0&time=17491
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=13&resets=0&time=15633
+NewEntry
+PXI
+I liked the look and feel of the game=6
+The game was not too easy and not too hard to play=3
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=5
+I felt free to play the game in my own way=7
+I wanted to explore how the game evolved=6
+I was fully focused on the game=6
+I felt I was good at playing this game=5
+Playing the game was meaningful to me=3
+I had a good time playing this game=6
+RANKINGS
+Rank0=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank1=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank2=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank3=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank4=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank5=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank6=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+Rank7=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank8=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+STATS
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=46&resets=0&time=56862
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=26&resets=0&time=32296
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=17&resets=0&time=17075
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=39&resets=0&time=23590
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=17&resets=0&time=16533
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=26&resets=0&time=15901
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=36&resets=0&time=31587
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=10&resets=0&time=12142
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=45&resets=0&time=28047
+NewEntry
+PXI
+I liked the look and feel of the game=6
+The game was not too easy and not too hard to play=5
+It was easy to know how to perform actions in the game=6
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=3
+I felt free to play the game in my own way=7
+I wanted to explore how the game evolved=4
+I was fully focused on the game=7
+I felt I was good at playing this game=6
+Playing the game was meaningful to me=7
+I had a good time playing this game=6
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank2=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank3=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank4=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank5=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank6=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank7=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank8=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+STATS
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=19&resets=0&time=43603
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=78&resets=1&time=250419
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=13&resets=0&time=89147
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=10&resets=0&time=22049
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=24&resets=0&time=31696
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=35&resets=0&time=43810
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=46&resets=0&time=53743
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=37&resets=3&time=111070
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=32&resets=0&time=69760
+NewEntry
+PXI
+I liked the look and feel of the game=5
+The game was not too easy and not too hard to play=3
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=6
+The game gave clear feedback on my progress towards the goals=2
+I felt free to play the game in my own way=4
+I wanted to explore how the game evolved=4
+I was fully focused on the game=3
+I felt I was good at playing this game=5
+Playing the game was meaningful to me=4
+I had a good time playing this game=6
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank2=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank3=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank4=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank5=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank6=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank7=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank8=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+STATS
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=40&resets=0&time=63852
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=17&resets=0&time=20116
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=43&resets=0&time=45768
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=31&resets=0&time=23948
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=26&resets=0&time=16884
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=38&resets=0&time=28363
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=45&resets=0&time=31846
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=13&resets=0&time=19025
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=10&resets=0&time=9285
+NewEntry
+PXI
+I liked the look and feel of the game=6
+The game was not too easy and not too hard to play=7
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=7
+The game gave clear feedback on my progress towards the goals=4
+I felt free to play the game in my own way=5
+I wanted to explore how the game evolved=6
+I was fully focused on the game=6
+I felt I was good at playing this game=5
+Playing the game was meaningful to me=4
+I had a good time playing this game=6
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank2=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank3=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank4=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank5=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank6=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank7=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank8=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+STATS
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=34&resets=0&time=25708
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=8&resets=0&time=12018
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=26&resets=0&time=15817
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=34&resets=1&time=29658
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=79&resets=2&time=63095
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=15&resets=0&time=16890
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=17&resets=0&time=13800
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=82&resets=3&time=130305
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=33&resets=0&time=20314
+NewEntry
+PXI
+I liked the look and feel of the game=5
+The game was not too easy and not too hard to play=2
+It was easy to know how to perform actions in the game=7
+The goals of the game were clear to me=6
+The game gave clear feedback on my progress towards the goals=5
+I felt free to play the game in my own way=4
+I wanted to explore how the game evolved=3
+I was fully focused on the game=5
+I felt I was good at playing this game=6
+Playing the game was meaningful to me=1
+I had a good time playing this game=5
+RANKINGS
+Rank0=0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2
+Rank1=2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2
+Rank2=2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1
+Rank3=0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2
+Rank4=2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0
+Rank5=0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1
+Rank6=1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a
+Rank7=4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0
+Rank8=1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2
+STATS
+4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0?inputs=29&resets=0&time=33544
+1;1;1;1;4b|1;1;1a;1;1p|2;1;1;1c;2|0;1;1;1b;4a|0;4p;4c;2;2?inputs=77&resets=3&time=155758
+1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a?inputs=45&resets=0&time=42890
+2;2;0;4c|1p;1b;1;4b|1a;2;2;1c|4a;4p;1;1?inputs=13&resets=0&time=23804
+0;2;2;1|2;1p;1b;1|2;2;1a;4b|0;4p;4a;2?inputs=8&resets=0&time=9504
+2;1;2;0;0|1p;1a;1;1;1|1b;1;1;1;1|1;4p;2;4a;2|4b;1;1;1;2?inputs=19&resets=0&time=16111
+0;0;1;1;0|1;1;1;1;4c|1;4a;1;1b;4p|1;1a;1c;1;1p|4b;2;1;1;1?inputs=42&resets=0&time=52001
+0;0;0;0;0|4p;1;4a;4b;1|2;1p;1;1;0|1;1b;1;1a;1|2;1;1;1;2?inputs=26&resets=0&time=17216
+2;2;2;4c;4p|4b;1;1b;1p;4a|1d;1a;1c;2;2|1;1;0;1;0|4d;1;1;0;0?inputs=41&resets=0&time=38105

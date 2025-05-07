@@ -57,14 +57,43 @@ with open("ColorFillerData.txt", "r") as file:
         linesc.append(s.rstrip())
     while (i + 1) * 32 < len(linesc):
         ses = Session(linesc[i * 33:(i * 33) + 33])
-        ses.print_this()
+        # ses.print_this()
         sessions.append(ses)
         i += 1
+time_rankings = {}
+input_rankings = {}
+reset_rankings = {}
+ranks = {}
 for sess in sessions:
     for i in range(9):
+        if sess.rankings[i].replace(";", ":") not in ranks.keys():
+            ranks[sess.rankings[i].replace(";", ":")] = []
         rankings_per_level[sess.rankings[i]].append(i)
+        ranks[sess.rankings[i].replace(";", ":")].append(i)
+    for stat in sess.stats.keys():
+        if stat.replace(";", ":") not in time_rankings:
+            time_rankings[stat.replace(";", ":")] = []
+            input_rankings[stat.replace(";", ":")] = []
+            reset_rankings[stat.replace(";", ":")] = []
+        time_rankings[stat.replace(";", ":")].append(sess.stats[stat].time)
+        input_rankings[stat.replace(";", ":")].append(sess.stats[stat].inputs)
+        reset_rankings[stat.replace(";", ":")].append(sess.stats[stat].resets)
 df = pd.DataFrame.from_dict(rankings_per_level, orient='index',
                             columns=['Rater' + str(i + 1) for i in range(len(sessions))])
+df_t = pd.DataFrame.from_dict(time_rankings)
+df_i = pd.DataFrame.from_dict(input_rankings)
+df_r = pd.DataFrame.from_dict(reset_rankings)
+df_ranks = pd.DataFrame.from_dict(ranks)
+df_t.to_csv("time_data.csv", index=False)
+df_i.to_csv("input_data.csv", index=False)
+df_r.to_csv("reset_data.csv", index=False)
+df_ranks.to_csv("rank_data.csv", index=False)
+print("time ranks")
+print(df_t)
+print("input rankings")
+print(df_i)
+print("reset rankings")
+print(df_r)
 expected_ranking = {
     '4b;1;1;0;0|1;1;1;0;0|1b;1;2;4p;0|1;1a;1;0;0|4a;1p;0;1;0': 0,
     '1;1;1;1|1;1;1a;1|1;1;1b;4p|4b;1p;1;4a': 1,
